@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.sql.*;
 
-
+//all code by ethan
 public class UserLogin{
 
     public static  String UserLogin(String ID, String Password) throws SQLException{

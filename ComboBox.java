@@ -55,7 +55,7 @@ public class ComboBox extends JFrame implements ActionListener
 	public String first_item;
 	private String id;
 	private String studen;
-
+//ethan added id to pass through combo
 	public ComboBox(String Title, List<String> StringList, int role, String id )
 	{
 		this.role = role;
@@ -476,11 +476,14 @@ public class ComboBox extends JFrame implements ActionListener
 
 	}
 
+	//implented by ethan  Student Add, Student Drop, Professor Modify Grade, Professor Modify Course. All frames of gui done by Jared. SQL implentation completed by ethan. Bug checking ethan.
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
+		//implented by ethan marked with /e
 		if (role == STUDENT_ADD_COURSE)
 		{
+			//e
 			StudentSQL sql = new StudentSQL();
 			Connection conn = UserLogin.New_Login("Student", "StudentPassword");
 			if (e.getSource() == msglist)
@@ -495,7 +498,7 @@ public class ComboBox extends JFrame implements ActionListener
 					break;
 
 				default:
-
+					//e + jared frame
 					CURRENT_ITEM = cb.getSelectedItem().toString(); // <-- "course" contains the course name as string.
 																	// Run an SQL query to get the rest of its
 																	// information.
@@ -526,7 +529,7 @@ public class ComboBox extends JFrame implements ActionListener
 					}
 
 				}
-			}
+			} //end of e bug checking
 			if (e.getSource() == register)
 			{
 				if (CURRENT_ITEM == null)
@@ -548,7 +551,7 @@ public class ComboBox extends JFrame implements ActionListener
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}
-		}
+		}//e + bug checking
 		if (role == STUDENT_DROP_COURSE)
 		{
 			StudentSQL sql = new StudentSQL();
@@ -595,7 +598,7 @@ public class ComboBox extends JFrame implements ActionListener
 					// with .append(" " + {STRING}); for formating.
 					break;
 				}
-			}
+			}//implented by ethan marked
 			if (e.getSource() == unregister)
 			{
 				if (CURRENT_ITEM == null)
@@ -618,12 +621,13 @@ public class ComboBox extends JFrame implements ActionListener
 				}
 			}
 		}
+		//implented by ethan marked with //e
 		if (role == PROFESSOR_MODIFY_COURSE_GRADES)
 		{
 			Connection conn = UserLogin.New_Login("Professor", "ProfessorPassword");
 			if (e.getSource() == msglist)
 
-
+			//e
 			{
 				JComboBox cb = (JComboBox) e.getSource();
 				int selection = cb.getSelectedIndex();
@@ -738,7 +742,7 @@ public class ComboBox extends JFrame implements ActionListener
 
 								st.executeUpdate();
 								gup = true;
-
+							//end of e
 							}catch (SQLException m){
 								System.out.println("Message: "+m.getMessage());
 								gup = false;
@@ -764,6 +768,7 @@ public class ComboBox extends JFrame implements ActionListener
 			}
 
 		}
+		//implented by ethan marked with //e
 		if (role == PROFESSOR_MODIFY_COURSE_DESCRIPTION)
 		{
 			Connection conn = UserLogin.New_Login("Professor", "ProfessorPassword");
@@ -812,6 +817,7 @@ public class ComboBox extends JFrame implements ActionListener
 
 				}
 			}
+			//e continues
 			if (e.getSource() == update)
 			{
 
@@ -839,7 +845,7 @@ public class ComboBox extends JFrame implements ActionListener
 				gup = false;
 			}
 			Boolean sucess = gup;
-
+			//end of e
 				if (sucess)
 				{
 					JOptionPane.showMessageDialog(null, "Description updated.", "SUCCESS",
@@ -851,6 +857,7 @@ public class ComboBox extends JFrame implements ActionListener
 				}
 			}
 		}
+		//implented by ethan marked with //e
 		if (role == ADMIN_STUDENT_ADD_COURSE)
 		{
 			String student_id = SchoolAdministratorMainWindow.CURRENT_STUDENT;
@@ -897,7 +904,7 @@ public class ComboBox extends JFrame implements ActionListener
 							System.out.println(m.getMessage());
 						}
 					}
-				}
+				} //e continues
 				if (e.getSource() == register)
 				{
 					if (CURRENT_ITEM == null)
@@ -912,7 +919,7 @@ public class ComboBox extends JFrame implements ActionListener
 					SchoolAdminSQL sql = new SchoolAdminSQL();
 
 					boolean success = sql.AddStudToCourse(conn, student_id, CURRENT_ITEM);// SQL boolean to check if course is sucessfully added
-
+					//end of e
 					if (success)
 					{
 						JOptionPane.showMessageDialog(null, "Class added.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
@@ -924,6 +931,7 @@ public class ComboBox extends JFrame implements ActionListener
 				}
 			}
 		}
+		//implented by ethan marked with //e
 		if (role == ADMIN_STUDENT_DROP_COURSE)
 		{
 			String student_id = SchoolAdministratorMainWindow.CURRENT_STUDENT;
@@ -972,7 +980,7 @@ public class ComboBox extends JFrame implements ActionListener
 						// with .append(" " + {STRING}); for formating.
 						break;
 				}
-			}
+			} //e continues
 			if (e.getSource() == unregister)
 			{
 				if (CURRENT_ITEM == null)
@@ -984,7 +992,7 @@ public class ComboBox extends JFrame implements ActionListener
 				// RUN SQL FUNCTION TO unregister COURSE for student
 				StudentSQL sqls = new StudentSQL();
 				boolean success = sqls.student_Drop(conn, CURRENT_ITEM, student_id); // SQL boolean to check if course is sucessfully dropped
-
+				//end of e
 				if (success)
 				{
 					JOptionPane.showMessageDialog(null, "Class dropped.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
@@ -995,6 +1003,7 @@ public class ComboBox extends JFrame implements ActionListener
 				}
 			}
 		}
+
 		if (role == DBA_MODIFY_STUDENT_GRADES)
 		{
 			String current_student_id = first_item; // <--this variable contains the student ID
@@ -1023,7 +1032,7 @@ public class ComboBox extends JFrame implements ActionListener
 					break;
 
 				}
-			}
+			} //implented by ethan marked with //e
 			if (e.getSource() == assign_grade)
 			{
 				if (CURRENT_ITEM == null)
@@ -1051,7 +1060,7 @@ public class ComboBox extends JFrame implements ActionListener
 					String ng = number_grade.getText(); // CONTAINS THE NUMBER GRADE
 
 					boolean updated = true; // sql boolean to verify grade is updated
-
+					//end of e
 					if (updated)
 					{
 						JOptionPane.showMessageDialog(null, "Grade has been updated.", "SUCCESS",
@@ -1068,6 +1077,7 @@ public class ComboBox extends JFrame implements ActionListener
 			}
 
 		}
+
 		if (role == DBA_STUDENT_ADD_COURSE)
 		{
 			 // "student_id" variable contains current student id, use
@@ -1096,6 +1106,7 @@ public class ComboBox extends JFrame implements ActionListener
 					// with .append(" " + {STRING}); for formating.
 				}
 			}
+
 			if (e.getSource() == register)
 			{
 				if (CURRENT_ITEM == null)
@@ -1107,7 +1118,7 @@ public class ComboBox extends JFrame implements ActionListener
 				// RUN SQL FUNCTION TO ADD COURSE
 
 				boolean success = false; // SQL boolean to check if course is sucessfully added
-
+				//end of e
 				if (success)
 				{
 					JOptionPane.showMessageDialog(null, "Class added.", "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
@@ -1148,6 +1159,7 @@ public class ComboBox extends JFrame implements ActionListener
 					break;
 				}
 			}
+			//elizandrews
 			if (e.getSource() == unregister)
 			{
 				if (CURRENT_ITEM == null)

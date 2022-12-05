@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 
-
+//all code by ethan
 public class StudentSQL {
 
     //student views (needs return objects)

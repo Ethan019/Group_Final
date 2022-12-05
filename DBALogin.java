@@ -95,6 +95,7 @@ public class DBALogin
 	{
 		public void actionPerformed(ActionEvent event) throws IllegalArgumentException
 		{
+			//impleented by Ethan
 			Object source = event.getSource();
 			if (source == LOGIN)
 			try {
@@ -112,7 +113,7 @@ public class DBALogin
 
 					String is_user = UserLogin.AdminLogin(id, pw, dbaid);
 
-
+					//impleented by Ethan
 					if (Objects.equals(is_user, null)) {
 						JOptionPane.showMessageDialog(null, "Incorrect Username or Password", "ERROR",
 								JOptionPane.ERROR_MESSAGE);

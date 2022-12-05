@@ -97,7 +97,9 @@ public class LoginWindow
 
 					//boolean is_user = true; // MAKE THIS BOOLEAN TRUE OR FALSE DEPENDING ON IF THEY CAN LOGIN AS A USER OR
 					// NOT
+					//
 
+					//impleented by Ethan
 					String is_user = UserLogin.UserLogin(id, pw);
 
 					String[] args = {id};
@@ -107,6 +109,7 @@ public class LoginWindow
 								JOptionPane.ERROR_MESSAGE);
 
 					} else
+					//impleented by Ethan
 					{
 						if (Objects.equals(is_user, "Student")) // PLACE HOLDER: determine if they are a student
 
