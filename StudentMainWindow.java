@@ -68,7 +68,7 @@ public class StudentMainWindow
 		{
 			Object source = event.getSource();
 			StudentSQL SQL = new StudentSQL();
-
+		//sql integrated by ethan
 			Connection conn = UserLogin.New_Login("Student", "StudentPassword");
 			if (source == SEE_CURRENT_COURSES)
 			{
@@ -79,7 +79,7 @@ public class StudentMainWindow
 				System.out.println("\n" + "========== Displaying courses for Student " + id + " ==========");
 				SQL.student_View(conn, id);
 			}
-
+			//sql integrated by ethan
 			if (source == MODIFY_COURSE_REGISTRATION)
 			{
 

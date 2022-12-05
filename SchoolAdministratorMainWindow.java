@@ -96,6 +96,7 @@ public class SchoolAdministratorMainWindow
 			}catch (SQLException e){
 				System.out.println(e.getMessage());
 			}
+			//sql integrated by ethan
 			if (source == ADD_OR_REMOVE_A_COURSE)
 			{
 				Object[] options1 =
@@ -215,6 +216,7 @@ public class SchoolAdministratorMainWindow
 
 				}
 			}
+			//sql integrated by ethan
 			if (source == ADD_OR_REMOVE_PROFESSOR)
 			{
 				Object[] options1 =
@@ -333,6 +335,7 @@ public class SchoolAdministratorMainWindow
 
 				}
 			}
+			//sql integrated by ethan
 			if (source == MODIFY_STUDENT_REGISTRATION)
 			{
 
@@ -464,6 +467,7 @@ public class SchoolAdministratorMainWindow
 				}
 
 			}
+			//sql integrated by ethan
 			if (source == ADD_OR_REMOVE_A_STUDENT)
 			{
 				Object[] options1 =
@@ -575,6 +579,7 @@ public class SchoolAdministratorMainWindow
 
 				}
 			}
+			//sql integrated by ethan
 			if (source == SEE_STUDENT_RECORD)
 			{
 

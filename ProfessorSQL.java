@@ -4,6 +4,7 @@ import java.io.*;
 import java.sql.*;
 import java.util.Scanner;
 
+//all code written by ethan
 public class ProfessorSQL{
     //getter for returning the CRN. WIll return null if crn is not found or SQL error.
 

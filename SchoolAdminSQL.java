@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+//code written by ethan + caroline. Ethan mostly error checked and made revisements some functions are old code.
 public class SchoolAdminSQL {
     // Allow admin to view student record info
     public void ViewStudRec(Connection conn, String STUDID) throws SQLException, IOException {

@@ -71,7 +71,7 @@ public class ProfessorMainWindow
 			} catch (SQLException e) {
 				System.out.println(e.getMessage());
 			}
-
+			//sql integrated by ethan
 			if (source == SEE_CURRENT_COURSES)
 			{
 				CustomOutputStream.main("PROFESSOR: SEE CURRENT COURSES", false);
@@ -116,7 +116,7 @@ public class ProfessorMainWindow
 				ComboBox.main("PROFESSOR: MODIFY COURSE GRADES", class_list, ComboBox.PROFESSOR_MODIFY_COURSE_GRADES, id);
 
 			}
-
+			//sql integrated by ethan (not working ran out of time to inteagrate)
 			if (source == MODIFY_A_COURSE_DESCRIPTION)
 			{
 				List<String> class_list = new ArrayList<String>();

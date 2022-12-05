@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class DBAMainWindow
+	//All code is written by Jared unless stated otherwise
 {
 	;
 	private static JButton MODIFY_STUDENT_TABLES, MODIFY_PROFESSOR_TABLES, MODIFY_SCHOOL_ADMIN_TABLES,
@@ -21,6 +22,8 @@ public class DBAMainWindow
 	private String MESSAGE = "Please Select an Option";
 	private String id;
 	private String CURRENT_Student;
+
+	//
 	public DBAMainWindow(String id)
 	{
 

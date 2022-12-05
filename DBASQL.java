@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.Random;
 
+//all code written by caroline + Liz
 public class DBASQL {
     // Raw SQL Command Enter
     public void RawSql(Connection conn, Scanner scan, String COMMAND) throws SQLException, IOException {
